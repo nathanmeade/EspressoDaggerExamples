@@ -95,4 +95,8 @@ dependencies {
     def mockk_version = "1.9.2"
     //def mockk_version = "1.9.3" // had issues with this
     androidTestImplementation "io.mockk:mockk-android:$mockk_version"
+
+    def androidx_espresso_idling_resource = "3.2.0"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$androidx_espresso_idling_resource"
+    implementation "androidx.test.espresso:espresso-idling-resource:$androidx_espresso_idling_resource"
 }
