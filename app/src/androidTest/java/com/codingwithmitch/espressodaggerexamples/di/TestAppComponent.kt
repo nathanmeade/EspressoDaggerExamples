@@ -1,6 +1,8 @@
 package com.codingwithmitch.espressodaggerexamples.di
 
 import android.app.Application
+import com.codingwithmitch.espressodaggerexamples.api.FakeApiService
+import com.codingwithmitch.espressodaggerexamples.repository.FakeMainRepositoryImpl
 import dagger.BindsInstance
 import dagger.Component
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -18,6 +20,10 @@ import javax.inject.Singleton
     RepositoryModule::class
 ])
 interface TestAppComponent: AppComponent {
+
+    val apiService: FakeApiService
+
+    val mainRepositoryImpl: FakeMainRepositoryImpl
 
     @Component.Builder
     interface Builder {
